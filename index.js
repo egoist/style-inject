@@ -1,4 +1,4 @@
-module.exports = function appendStyle (css) {
+module.exports = function styleInject (css) {
   css = css || '';
   var head = document.head || document.getElementsByTagName('head')[0];
   var style = document.createElement('style');
