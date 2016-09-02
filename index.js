@@ -1,4 +1,4 @@
-module.exports = function styleInject (css) {
+module.exports = function styleInject (css, returnValue) {
   css = css || '';
   var head = document.head || document.getElementsByTagName('head')[0];
   var style = document.createElement('style');
@@ -9,4 +9,5 @@ module.exports = function styleInject (css) {
     style.appendChild(document.createTextNode(css));
   }
   head.appendChild(style);
+  return returnValue;
 };
