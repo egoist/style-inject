@@ -1,6 +1,6 @@
 {
   "name": "style-inject",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Inject style tag to document head.",
   "main": "index.js",
   "scripts": {
