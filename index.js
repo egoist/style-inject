@@ -7,9 +7,9 @@ module.exports = function styleInject (css, returnValue, opts) {
   var style = document.createElement('style');
   style.type = 'text/css';
   
-  if (opts && opts.position === "top") {
+  if (opts && opts.insertAt === "top") {
     if (head.firstChild) {
-      this.insertBefore(style, head.firstChild);
+      head.insertBefore(style, head.firstChild);
     } else {
       head.appendChild(style);
     }
