@@ -17,8 +17,18 @@ const css = `
     margin: 0;
   }
 `;
-styleInject(css);
+styleInject(css, options);
 ```
+
+## Options
+
+### insertAt
+
+Type: `string`<br>
+Possible values: `top`<br>
+Default: `undefined`
+
+Insert `style` tag to specific position of `head` element.
 
 ## License
 
