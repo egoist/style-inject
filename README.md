@@ -1,5 +1,7 @@
 # style-inject
 
+[![NPM version](https://img.shields.io/npm/v/style-inject.svg?style=flat)](https://npmjs.com/package/style-inject) [![NPM downloads](https://img.shields.io/npm/dm/style-inject.svg?style=flat)](https://npmjs.com/package/style-inject) [![CircleCI](https://circleci.com/gh/egoist/style-inject/tree/master.svg?style=shield)](https://circleci.com/gh/egoist/style-inject/tree/master)  [![donate](https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&style=flat)](https://github.com/egoist/donate) [![chat](https://img.shields.io/badge/chat-on%20discord-7289DA.svg?style=flat)](https://chat.egoist.moe)
+
 Inject style tag to document head.
 
 ## Installation
