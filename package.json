@@ -1,6 +1,6 @@
 {
   "name": "style-inject",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Inject style tag to document head.",
   "main": "dist/style-inject.js",
   "scripts": {
@@ -34,6 +34,8 @@
   },
   "xo": {
     "extends": "rem/prettier",
-    "envs": ["browser"]
+    "envs": [
+      "browser"
+    ]
   }
 }
