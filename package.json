@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/egoist/style-inject#readme",
   "devDependencies": {
-    "bili": "^0.18.2",
+    "bili": "^1.5.8",
     "eslint-config-rem": "^3.2.0",
     "xo": "^0.18.2"
   },

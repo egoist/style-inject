@@ -1,5 +1,5 @@
 export default function styleInject(css, { insertAt } = {}) {
-  if (!css) return
+  if (!css || typeof document === 'undefined') return
 
   const head = document.head || document.getElementsByTagName('head')[0]
   const style = document.createElement('style')
