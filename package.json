@@ -3,9 +3,10 @@
   "version": "0.2.1",
   "description": "Inject style tag to document head.",
   "main": "dist/style-inject.js",
+  "module": "dist/style-inject.es.js",
   "scripts": {
     "test": "echo lol",
-    "build": "bili --format umd",
+    "build": "bili --format umd,es",
     "prepublishOnly": "npm run build",
     "lint": "xo"
   },
@@ -28,7 +29,7 @@
   },
   "homepage": "https://github.com/egoist/style-inject#readme",
   "devDependencies": {
-    "bili": "^1.5.8",
+    "bili": "^2.2.6",
     "eslint-config-rem": "^3.2.0",
     "xo": "^0.18.2"
   },

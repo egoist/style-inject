@@ -59,6 +59,10 @@ ansi-escapes@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npmjs.org/ansi-escapes/-/ansi-escapes-2.0.0.tgz#5bae52be424878dd9783e8910e3fc2922e83c81b"
 
+ansi-escapes@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/ansi-escapes/-/ansi-escapes-3.0.0.tgz#ec3e8b4e9f8064fc02c3ac9b65f1c275bda8ef92"
+
 ansi-regex@^2.0.0:
   version "2.1.1"
   resolved "https://registry.npmjs.org/ansi-regex/-/ansi-regex-2.1.1.tgz#c3b33ab5ee360d86e0e628f0468ae7ef27d654df"
@@ -374,9 +378,9 @@ big.js@^3.1.3:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/big.js/-/big.js-3.2.0.tgz#a5fc298b81b9e0dca2e458824784b65c52ba588e"
 
-bili@^1.5.8:
-  version "1.5.8"
-  resolved "https://registry.yarnpkg.com/bili/-/bili-1.5.8.tgz#e30fefdf231603a0baf8534308208d34507399a3"
+bili@^2.2.6:
+  version "2.2.6"
+  resolved "https://registry.yarnpkg.com/bili/-/bili-2.2.6.tgz#58a8eb9a8185ce3a9625ed34256a74db191bf691"
   dependencies:
     babel-core "^6.26.0"
     babel-plugin-alter-object-assign "^1.0.1"
@@ -387,6 +391,7 @@ bili@^1.5.8:
     babel-plugin-transform-react-jsx "^6.24.1"
     babel-preset-vue "^2.0.0"
     boxen "^1.3.0"
+    bytes "^3.0.0"
     cac "^4.2.4"
     camelcase "^4.1.0"
     chalk "^2.3.0"
@@ -397,8 +402,9 @@ bili@^1.5.8:
     globby "^7.1.1"
     gzip-size "^4.1.0"
     is-builtin-module "^2.0.0"
-    pretty-bytes "^4.0.2"
-    read-pkg-up "^3.0.0"
+    is-ci "^1.1.0"
+    log-update "^2.3.0"
+    parse-package-name "^0.1.0"
     rollup "^0.54.0"
     rollup-plugin-alias "^1.4.0"
     rollup-plugin-babel "^3.0.3"
@@ -407,14 +413,14 @@ bili@^1.5.8:
     rollup-plugin-hashbang "^1.0.1"
     rollup-plugin-json "^2.3.0"
     rollup-plugin-node-resolve "^3.0.0"
-    rollup-plugin-postcss "^1.2.0"
+    rollup-plugin-postcss "^1.2.3"
     rollup-plugin-replace "^2.0.0"
     rollup-plugin-uglify "^2.0.1"
     string-width "^2.1.1"
     stringify-author "^0.1.3"
     text-table "^0.2.0"
     uglify-es "^3.3.4"
-    use-config "^2.0.3"
+    use-config "^2.0.4"
 
 boxen@^1.2.1:
   version "1.2.1"
@@ -492,6 +498,10 @@ builtin-modules@^1.0.0, builtin-modules@^1.1.0, builtin-modules@^1.1.1:
 builtin-modules@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/builtin-modules/-/builtin-modules-2.0.0.tgz#60b7ef5ae6546bd7deefa74b08b62a43a232648e"
+
+bytes@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/bytes/-/bytes-3.0.0.tgz#d32815404d689699f85a4ea4fa8755dd13a96048"
 
 cac@^4.2.4:
   version "4.3.4"
@@ -592,6 +602,10 @@ character-reference-invalid@^1.0.0:
   version "1.1.1"
   resolved "https://registry.npmjs.org/character-reference-invalid/-/character-reference-invalid-1.1.1.tgz#942835f750e4ec61a308e60c2ef8cc1011202efc"
 
+ci-info@^1.0.0:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/ci-info/-/ci-info-1.1.2.tgz#03561259db48d0474c8bdc90f5b47b068b6bbfb4"
+
 circular-json@^0.3.1:
   version "0.3.3"
   resolved "https://registry.npmjs.org/circular-json/-/circular-json-0.3.3.tgz#815c99ea84f6809529d2f45791bdf82711352d66"
@@ -611,6 +625,12 @@ cli-cursor@^1.0.1:
   resolved "https://registry.npmjs.org/cli-cursor/-/cli-cursor-1.0.2.tgz#64da3f7d56a54412e59794bd62dc35295e8f2987"
   dependencies:
     restore-cursor "^1.0.1"
+
+cli-cursor@^2.0.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/cli-cursor/-/cli-cursor-2.1.0.tgz#b35dac376479facc3e94747d41d0d0f5238ffcb5"
+  dependencies:
+    restore-cursor "^2.0.0"
 
 cli-width@^2.0.0:
   version "2.2.0"
@@ -983,7 +1003,7 @@ enhance-visitors@^1.0.0:
   dependencies:
     lodash "^4.13.1"
 
-error-ex@^1.2.0, error-ex@^1.3.1:
+error-ex@^1.2.0:
   version "1.3.1"
   resolved "https://registry.npmjs.org/error-ex/-/error-ex-1.3.1.tgz#f855a86ce61adc4e8621c3cda21e7a7612c3a8dc"
   dependencies:
@@ -1737,6 +1757,12 @@ is-builtin-module@^2.0.0:
   dependencies:
     builtin-modules "^2.0.0"
 
+is-ci@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/is-ci/-/is-ci-1.1.0.tgz#247e4162e7860cebbdaf30b774d6b0ac7dcfe7a5"
+  dependencies:
+    ci-info "^1.0.0"
+
 is-decimal@^1.0.0:
   version "1.0.1"
   resolved "https://registry.npmjs.org/is-decimal/-/is-decimal-1.0.1.tgz#f5fb6a94996ad9e8e3761fbfbd091f1fca8c4e82"
@@ -1980,10 +2006,6 @@ jsesc@~0.5.0:
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/jsesc/-/jsesc-0.5.0.tgz#e7dee66e35d6fc16f710fe91d5cf69f70f08911d"
 
-json-parse-better-errors@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/json-parse-better-errors/-/json-parse-better-errors-1.0.1.tgz#50183cd1b2d25275de069e9e71b467ac9eab973a"
-
 json-stable-stringify@^1.0.0, json-stable-stringify@^1.0.1:
   version "1.0.1"
   resolved "https://registry.npmjs.org/json-stable-stringify/-/json-stable-stringify-1.0.1.tgz#9a759d39c5f2ff503fd5300646ed445f88c4f9af"
@@ -2056,15 +2078,6 @@ load-json-file@^2.0.0:
     pify "^2.0.0"
     strip-bom "^3.0.0"
 
-load-json-file@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/load-json-file/-/load-json-file-4.0.0.tgz#2f5f45ab91e33216234fd53adab668eb4ec0993b"
-  dependencies:
-    graceful-fs "^4.1.2"
-    parse-json "^4.0.0"
-    pify "^3.0.0"
-    strip-bom "^3.0.0"
-
 loader-utils@^0.2.16:
   version "0.2.17"
   resolved "https://registry.yarnpkg.com/loader-utils/-/loader-utils-0.2.17.tgz#f86e6374d43205a6e6c60e9196f17c0299bfb348"
@@ -2122,6 +2135,14 @@ log-symbols@^2.0.0:
   resolved "https://registry.npmjs.org/log-symbols/-/log-symbols-2.1.0.tgz#f35fa60e278832b538dc4dddcbb478a45d3e3be6"
   dependencies:
     chalk "^2.0.1"
+
+log-update@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/log-update/-/log-update-2.3.0.tgz#88328fd7d1ce7938b29283746f0b1bc126b24708"
+  dependencies:
+    ansi-escapes "^3.0.0"
+    cli-cursor "^2.0.0"
+    wrap-ansi "^3.0.1"
 
 loose-envify@^1.0.0:
   version "1.3.1"
@@ -2211,6 +2232,10 @@ micromatch@^2.3.11:
     object.omit "^2.0.0"
     parse-glob "^3.0.4"
     regex-cache "^0.4.2"
+
+mimic-fn@^1.0.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/mimic-fn/-/mimic-fn-1.1.0.tgz#e667783d92e89dbd342818b5230b9d62a672ad18"
 
 minimatch@^3.0.0, minimatch@^3.0.2, minimatch@^3.0.3, minimatch@^3.0.4:
   version "3.0.4"
@@ -2345,6 +2370,12 @@ onetime@^1.0.0:
   version "1.1.0"
   resolved "https://registry.npmjs.org/onetime/-/onetime-1.1.0.tgz#a1f7838f8314c516f05ecefcbc4ccfe04b4ed789"
 
+onetime@^2.0.0:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/onetime/-/onetime-2.0.1.tgz#067428230fd67443b2794b22bba528b6867962d4"
+  dependencies:
+    mimic-fn "^1.0.0"
+
 optionator@^0.8.2:
   version "0.8.2"
   resolved "https://registry.npmjs.org/optionator/-/optionator-0.8.2.tgz#364c5e409d3f4d6301d6c0b4c05bba50180aeb64"
@@ -2413,12 +2444,9 @@ parse-json@^2.2.0:
   dependencies:
     error-ex "^1.2.0"
 
-parse-json@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/parse-json/-/parse-json-4.0.0.tgz#be35f5425be1f7f6c747184f98a788cb99477ee0"
-  dependencies:
-    error-ex "^1.3.1"
-    json-parse-better-errors "^1.0.1"
+parse-package-name@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/parse-package-name/-/parse-package-name-0.1.0.tgz#3f44dd838feb4c2be4bf318bae4477d7706bade4"
 
 parseurl@~1.3.2:
   version "1.3.2"
@@ -2819,10 +2847,6 @@ prettier@^1.2.2:
   version "1.7.4"
   resolved "https://registry.npmjs.org/prettier/-/prettier-1.7.4.tgz#5e8624ae9363c80f95ec644584ecdf55d74f93fa"
 
-pretty-bytes@^4.0.2:
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/pretty-bytes/-/pretty-bytes-4.0.2.tgz#b2bf82e7350d65c6c33aa95aaa5a4f6327f61cd9"
-
 private@^0.1.7:
   version "0.1.8"
   resolved "https://registry.yarnpkg.com/private/-/private-0.1.8.tgz#2381edb3689f7a53d653190060fcf822d2f368ff"
@@ -2896,13 +2920,6 @@ read-pkg-up@^2.0.0:
     find-up "^2.0.0"
     read-pkg "^2.0.0"
 
-read-pkg-up@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/read-pkg-up/-/read-pkg-up-3.0.0.tgz#3ed496685dba0f8fe118d0691dc51f4a1ff96f07"
-  dependencies:
-    find-up "^2.0.0"
-    read-pkg "^3.0.0"
-
 read-pkg@^1.0.0:
   version "1.1.0"
   resolved "https://registry.npmjs.org/read-pkg/-/read-pkg-1.1.0.tgz#f5ffaa5ecd29cb31c0474bca7d756b6bb29e3f28"
@@ -2918,14 +2935,6 @@ read-pkg@^2.0.0:
     load-json-file "^2.0.0"
     normalize-package-data "^2.3.2"
     path-type "^2.0.0"
-
-read-pkg@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/read-pkg/-/read-pkg-3.0.0.tgz#9cbc686978fee65d16c00e2b19c237fcf6e38389"
-  dependencies:
-    load-json-file "^4.0.0"
-    normalize-package-data "^2.3.2"
-    path-type "^3.0.0"
 
 readable-stream@^2.2.2:
   version "2.3.3"
@@ -3115,6 +3124,13 @@ restore-cursor@^1.0.1:
     exit-hook "^1.0.0"
     onetime "^1.0.0"
 
+restore-cursor@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/restore-cursor/-/restore-cursor-2.0.0.tgz#9f7ee287f82fd326d4fd162923d62129eee0dfaf"
+  dependencies:
+    onetime "^2.0.0"
+    signal-exit "^3.0.2"
+
 rimraf@^2.2.8:
   version "2.6.2"
   resolved "https://registry.npmjs.org/rimraf/-/rimraf-2.6.2.tgz#2ed8150d24a16ea8651e6d6ef0f47c4158ce7a36"
@@ -3171,9 +3187,9 @@ rollup-plugin-node-resolve@^3.0.0:
     is-module "^1.0.0"
     resolve "^1.1.6"
 
-rollup-plugin-postcss@^1.2.0:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/rollup-plugin-postcss/-/rollup-plugin-postcss-1.2.1.tgz#7b928f2fb597891d094b9a0807dd8e06e3453406"
+rollup-plugin-postcss@^1.2.3:
+  version "1.2.8"
+  resolved "https://registry.yarnpkg.com/rollup-plugin-postcss/-/rollup-plugin-postcss-1.2.8.tgz#3389f4235521cd6a019ab6316cadccb0046c11f3"
   dependencies:
     chalk "^2.0.0"
     concat-with-sourcemaps "^1.0.5"
@@ -3615,9 +3631,9 @@ url-parse-lax@^1.0.0:
   dependencies:
     prepend-http "^1.0.1"
 
-use-config@^2.0.3:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/use-config/-/use-config-2.0.3.tgz#ee8cda5b2874f953784b8372b61b0fa18d6b5942"
+use-config@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/use-config/-/use-config-2.0.4.tgz#1e14e5dbc600533aa5cd1b35d43a5be849b45b0c"
   dependencies:
     load-json-file "^2.0.0"
     path-exists "^3.0.0"
@@ -3685,6 +3701,13 @@ widest-line@^2.0.0:
 wordwrap@~1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/wordwrap/-/wordwrap-1.0.0.tgz#27584810891456a4171c8d0226441ade90cbcaeb"
+
+wrap-ansi@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/wrap-ansi/-/wrap-ansi-3.0.1.tgz#288a04d87eda5c286e060dfe8f135ce8d007f8ba"
+  dependencies:
+    string-width "^2.1.1"
+    strip-ansi "^4.0.0"
 
 wrappy@1:
   version "1.0.2"
