@@ -32,6 +32,11 @@ Default: `undefined`
 
 Insert `style` tag to specific position of `head` element.
 
+### styleProps
+Type: `Object`<br>
+Possible values: `{id: 'exampleId'}`<br>
+Default: `undefined`
+
 ## License
 
 MIT &copy; [EGOIST](https://github.com/egoist)
