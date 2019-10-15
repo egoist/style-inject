@@ -3,10 +3,10 @@ export default function styleInject(css, { insertAt } = {}) {
 
   const ampStyleSelector = 'style[amp-custom]'
 
-  const { appendChild, insertBefore, firstChild, querySelector } =
+  const head =
     document.head || document.getElementsByTagName('head')[0]
   const style = document.createElement('style')
-  const ampStyle = querySelector(ampStyleSelector) || style
+  const ampStyle = head.querySelector(ampStyleSelector) || style
 
   switch (insertAt) {
     // AMP only allows a single <script> tag with an 'amp-custom' attribute set
@@ -14,8 +14,8 @@ export default function styleInject(css, { insertAt } = {}) {
       style.setAttribute('amp-custom', true)
       ampStyle.innerText += css
 
-      if (!querySelector(ampStyleSelector)) {
-        appendChild(ampStyle)
+      if (!head.querySelector(ampStyleSelector)) {
+        head.appendChild(ampStyle)
       }
       break
     // By default styleInject appends a new <style> tag in <head>
@@ -30,9 +30,9 @@ export default function styleInject(css, { insertAt } = {}) {
       }
 
       if (firstChild && insertAt === 'top') {
-        insertBefore(style, firstChild)
+        head.insertBefore(style, firstChild)
       } else {
-        appendChild(style)
+        head.appendChild(style)
       }
   }
 }
