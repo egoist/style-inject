@@ -29,8 +29,8 @@ export default function styleInject(css, { insertAt } = {}) {
         style.appendChild(document.createTextNode(css))
       }
 
-      if (firstChild && insertAt === 'top') {
-        head.insertBefore(style, firstChild)
+      if (head.firstChild && insertAt === 'top') {
+        head.insertBefore(style, head.firstChild)
       } else {
         head.appendChild(style)
       }
