@@ -3,8 +3,7 @@ export default function styleInject(css, { insertAt } = {}) {
 
   const ampStyleSelector = 'style[amp-custom]'
 
-  const head =
-    document.head || document.getElementsByTagName('head')[0]
+  const head = document.head || document.getElementsByTagName('head')[0]
   const style = document.createElement('style')
   const ampStyle = head.querySelector(ampStyleSelector) || style
 
