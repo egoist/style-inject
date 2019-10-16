@@ -10,7 +10,7 @@ export default function styleInject(css, { insertAt } = {}) {
   switch (insertAt) {
     // AMP only allows a single <script> tag with an 'amp-custom' attribute set
     case 'amp':
-      style.setAttribute('amp-custom', true)
+      style.setAttribute('amp-custom', '')
       ampStyle.innerText += css
 
       if (!head.querySelector(ampStyleSelector)) {
