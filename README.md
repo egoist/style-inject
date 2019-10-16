@@ -27,10 +27,10 @@ styleInject(css, options);
 ### insertAt
 
 Type: `string`<br>
-Possible values: `top`<br>
+Possible values: `top`, `amp`<br>
 Default: `undefined`
 
-Insert `style` tag to specific position of `head` element.
+Insert `style` tag to specific position of `head` element. If `amp` was selected, the whole CSS string gets injected in a single `<style amp-custom>...</style>` element, according to the [AMP docs](https://amp.dev/documentation/guides-and-tutorials/develop/style_and_layout/?format=websites#add-styles-to-a-page).
 
 ## License
 
