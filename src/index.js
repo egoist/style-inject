@@ -22,7 +22,7 @@ export default function styleInject(css, { insertAt, attributes } = {}) {
   }
   
   if (attributes) {
-    Object.entries(attributes).forEach(function (entry) {
+    Object.entries(attributes).forEach(entry => {
       style.setAttribute(entry[0], entry[1]);
     });
   }
