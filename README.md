@@ -36,7 +36,7 @@ Insert `style` tag to specific position of `head` element.
 
 Type: `object`<br>
 
-Additional attributes to add to the injected `style` tag.
+An object of additional attributes to add to the injected `style` tag, e.g., `id`.
 
 ## License
 
