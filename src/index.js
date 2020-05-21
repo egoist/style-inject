@@ -1,4 +1,4 @@
-export default function styleInject(css, { insertAt } = {}) {
+export default function styleInject(css, { insertAt, attributes } = {}) {
   if (!css || typeof document === 'undefined') return
 
   const head = document.head || document.getElementsByTagName('head')[0]
@@ -19,5 +19,11 @@ export default function styleInject(css, { insertAt } = {}) {
     style.styleSheet.cssText = css
   } else {
     style.appendChild(document.createTextNode(css))
+  }
+  
+  if (attributes) {
+    Object.entries(attributes).forEach(function (entry) {
+      style.setAttribute(entry[0], entry[1]);
+    });
   }
 }
