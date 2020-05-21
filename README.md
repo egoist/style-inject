@@ -32,6 +32,12 @@ Default: `undefined`
 
 Insert `style` tag to specific position of `head` element.
 
+### attributes
+
+Type: `object`<br>
+
+An object of additional attributes to add to the injected `style` tag, e.g., `id`.
+
 ## License
 
 MIT &copy; [EGOIST](https://github.com/egoist)
