@@ -3,7 +3,6 @@ export default function styleInject(css, { insertAt } = {}) {
 
   const head = document.head || document.getElementsByTagName('head')[0]
   const style = document.createElement('style')
-  style.type = 'text/css'
 
   if (insertAt === 'top') {
     if (head.firstChild) {
