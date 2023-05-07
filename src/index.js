@@ -1,8 +1,18 @@
-export default function styleInject(css, { insertAt } = {}) {
+/**
+ * Inject CSS into the head tag
+ * @param css The CSS string to inject
+ * @param id The ID of the style tag
+ * @param insertAt Where to insert the style tag
+ */
+export default function styleInject(css, id,  { insertAt } = {}) {
   if (!css || typeof document === 'undefined') return
 
+  if (document.getElementById(id)) {
+    return;
+  }
   const head = document.head || document.getElementsByTagName('head')[0]
   const style = document.createElement('style')
+  style.id = id
   style.type = 'text/css'
 
   if (insertAt === 'top') {
