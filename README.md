@@ -22,6 +22,51 @@ const css = `
 styleInject(css, options);
 ```
 
+### Usage with Next (SSR)
+
+If using a library that use `style-inject` for use css modules in Next.js,
+you need to inject styles during SSR, here's an example:
+
+```jsx
+// file: pages/_document.js
+
+import React from 'react';
+import { SSR_INJECT_ID } from 'style-inject';
+
+const SSRInjectStyles = () => {
+    if (!globalThis[SSR_INJECT_ID]) return null
+
+    return (
+        <>
+            {globalThis[SSR_INJECT_ID].map((module) => (
+                <style id={module.id} key={module.id}>
+                    {module.css}
+                </style>
+            ))}
+        </>
+    )
+}
+
+const Document = (props) => {
+    const { locale } = props
+    return (
+        <Html lang={locale}>
+            <Head>
+                {/* Inject styles during ssr */}
+                <SSRInjectStyles />
+                {/* ... */}
+            </Head>
+            <body>
+            {/* ... */}
+            </body>
+        </Html>
+    )
+}
+
+export default Document
+
+```
+
 ## Options
 
 ### insertAt
