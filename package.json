@@ -1,6 +1,6 @@
 {
   "name": "style-inject",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "description": "Inject style tag to document head.",
   "main": "dist/style-inject.js",
   "module": "dist/style-inject.es.js",
