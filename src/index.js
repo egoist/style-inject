@@ -1,3 +1,5 @@
+export const SSR_INJECT_ID = '__styleInject_SSR_MODULES';
+
 /**
  * Inject CSS into the head tag
  * @param css The CSS string to inject
@@ -5,7 +7,14 @@
  * @param insertAt Where to insert the style tag
  */
 export default function styleInject(css, id,  { insertAt } = {}) {
-  if (!css || typeof document === 'undefined') return
+  if (!css) return
+  if (typeof document === 'undefined') {
+    if (globalThis) {
+      globalThis[SSR_INJECT_ID] = globalThis[SSR_INJECT_ID] || [];
+      globalThis[SSR_INJECT_ID].push({ css, id });
+    }
+    return;
+  }
 
   if (document.getElementById(id)) {
     return;
