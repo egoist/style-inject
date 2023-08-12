@@ -2,6 +2,7 @@ export default function styleInject(css, { insertAt, insertBeforeQuerySelector }
   if (!css || typeof document === 'undefined') return
 
   const head = document.head || document.getElementsByTagName('head')[0]
+  /** node to insert style before */
   const insertBeforeNode = insertBeforeQuerySelector && head.querySelector(insertBeforeQuerySelector);
   const style = document.createElement('style')
   style.type = 'text/css'
