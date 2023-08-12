@@ -32,6 +32,14 @@ Default: `undefined`
 
 Insert `style` tag to specific position of `head` element.
 
+### insertBeforeQuerySelector
+
+Type: `string`<br>
+Possible values: any value that can be passed to `head.querySelector`<br>
+Default: `undefined`
+
+Insert `style` tag to above a specific tag in the `head` element.
+
 ## License
 
 MIT &copy; [EGOIST](https://github.com/egoist)
